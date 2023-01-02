@@ -40,33 +40,6 @@ export default function InputRadio(props: Props) {
       )}
     />
   );
-
-  // return (
-  //   <View
-  //   // className="relative cursor-pointer"
-  //   >
-  //     <Input
-  //       control={control}
-  //       // className="opacity-0 w-1 h-1 absolute top-0 left-0 peer"
-  //       // type="radio"
-  //       name={
-  //         props.actionType === 'income' ? 'incomeCategory' : 'expenseCategory'
-  //       }
-  //       value={`${value}`}
-  //       // {...register(
-  //       //   props.actionType === 'income'
-  //       //     ? 'incomeCategory'
-  //       //     : 'expenseCategory'
-  //       // )}
-  //     />
-
-  //     <Text
-  //     // className="ml-2 mb-2 p-2 inline-block border-2 border-white rounded-lg peer-checked:border-green-500 peer-checked:text-green-500"
-  //     >
-  //       {name}
-  //     </Text>
-  //   </View>
-  // );
 }
 
 const styles = StyleSheet.create({
@@ -78,6 +51,7 @@ const styles = StyleSheet.create({
     borderColor: 'rgb(48, 52, 54)',
     borderRadius: 8,
   },
+
   text: {
     color: '#fff',
     fontSize: 16,
