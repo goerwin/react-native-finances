@@ -62,27 +62,26 @@ const BUTTON_SIZE = 72;
 const BUTTON_GAP = 8;
 
 export interface Props {
-  value?: string;
-  onButtonClick: (value: string) => void;
+  strValue?: string;
+  onButtonClick: (value: { strValue: string; value: number }) => void;
   onBackspaceLongPress?: () => void;
 }
 
 export default function Calculator(props: Props) {
   const handleButtonClick = (val: Item) => {
-    const value = String(val.value);
-    props.onButtonClick(String(value));
-    const inputValue = props.value || '';
+    const btnValue = String(val.value);
+    const currStrValue = props.strValue || '';
+    const noCurrencyStrValue = removeCurrencyFormattingToValue(currStrValue);
+    const newNoFormatStrValue = applyCalcString(noCurrencyStrValue, btnValue);
+    const newStrValue = formatNumberValueToCurrency(newNoFormatStrValue);
+    const newValue = Number(newNoFormatStrValue);
 
-    props.onButtonClick(
-      formatNumberValueToCurrency(
-        applyCalcString(removeCurrencyFormattingToValue(inputValue), value)
-      )
-    );
+    props.onButtonClick({ strValue: newStrValue, value: newValue });
   };
 
   return (
     <View style={styles.container}>
-      <TextInput style={styles.topInput} value={props.value || '$0'} />
+      <TextInput style={styles.topInput} value={props.strValue || '$0'} />
 
       <View style={styles.buttonsContainer}>
         {items.map((el) => (
@@ -93,8 +92,6 @@ export default function Calculator(props: Props) {
             onLongPress={() => {
               if (el.value === 'backspace') props.onBackspaceLongPress?.();
             }}
-            // {...(el.value === 'backspace' ? backspaceBind() : {})}
-            // dangerouslySetInnerHTML={{ __html: String(el.name) }}
           >
             <Text style={styles.buttonText}>{String(el.name)}</Text>
           </Pressable>

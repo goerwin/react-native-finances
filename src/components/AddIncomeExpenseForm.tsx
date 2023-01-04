@@ -1,8 +1,7 @@
 import { useForm } from 'react-hook-form';
-import { View, StyleSheet, Text, Button } from 'react-native';
+import { Button, StyleSheet, View } from 'react-native';
 import { Action, ActionType, DB } from '../helpers/DBHelpers';
 import { sortByDateFnCreator } from '../helpers/general';
-import { removeCurrencyFormattingToValue } from './Calculator';
 import Input from './Input';
 import InputRadio from './InputRadio';
 import Popup from './Popup';
@@ -10,7 +9,8 @@ import Popup from './Popup';
 export interface Props {
   db: DB;
   actionType: ActionType;
-  value?: string;
+  strValue?: string;
+  value?: number;
   onClose: () => void;
   onSubmit: (value: Action) => void;
 }
@@ -18,6 +18,8 @@ export interface Props {
 export default function AddIncomeExpenseForm(props: Props) {
   const { handleSubmit, register, control } = useForm<Action>({
     defaultValues: {
+      value: props.value,
+      type: props.actionType,
       expenseCategory: undefined,
       incomeCategory: undefined,
       description: '',
@@ -32,28 +34,10 @@ export default function AddIncomeExpenseForm(props: Props) {
 
   return (
     <Popup
-      title={props.value || '$0'}
+      title={props.strValue || '$0'}
       aboveHeadingTitle={props.actionType === 'expense' ? 'Gasto' : 'Ingreso'}
     >
       <View>
-        <Input
-          control={control}
-          style={{ display: 'none' }}
-          name="value"
-          // TODO: this value has to be converted to a number
-          value={props.value}
-          // {...register('value', {
-          //   value: Number(removeCurrencyFormattingToValue(props.value || '')),
-          //   valueAsNumber: true,
-          // })}
-        />
-        <Input
-          control={control}
-          style={{ display: 'none' }}
-          name="type"
-          value={props.actionType}
-        />
-
         <View style={styles.inputsContainer}>
           {categories.map(({ id, name }) => (
             <InputRadio
