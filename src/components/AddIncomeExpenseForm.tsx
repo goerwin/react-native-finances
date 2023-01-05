@@ -56,11 +56,9 @@ export default function AddIncomeExpenseForm(props: Props) {
 
         <View>
           <Input
-            style={styles.textarea}
             control={control}
             name="description"
             placeholder="Descripción"
-            placeholderTextColor="#aaa"
           />
         </View>
 
@@ -79,13 +77,5 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     flexDirection: 'row',
     justifyContent: 'center',
-  },
-
-  textarea: {
-    backgroundColor: 'rgb(88, 96, 100)',
-    padding: 16,
-    borderWidth: 2,
-    borderRadius: 8,
-    color: '#fff',
   },
 });

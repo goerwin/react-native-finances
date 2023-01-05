@@ -1,25 +1,26 @@
 import 'react-native-get-random-values'; // for nanoid
 
 import { useState } from 'react';
+import { Button, StyleSheet, useWindowDimensions, View } from 'react-native';
+import Toast from 'react-native-toast-notifications';
+import todo_db from './dummytodo.json';
 import {
-  View,
-  StyleSheet,
-  useWindowDimensions,
-  Button,
-  Text,
-} from 'react-native';
-import { addAction } from './src/api/actions';
+  addAction,
+  addCategory,
+  deleteAction,
+  deleteCategory,
+  editAction,
+  editCategory,
+} from './src/api/actions';
 import AddIncomeExpenseForm from './src/components/AddIncomeExpenseForm';
 import Calculator from './src/components/Calculator';
-import Toast from 'react-native-toast-notifications';
 import {
   Action,
   ActionCategory,
   ActionType,
   DB,
-  initialDB,
 } from './src/helpers/dbHelpers';
-import todo_db from './dummytodo.json';
+import PopupCategories from './src/components/PopupCategories';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -56,8 +57,7 @@ export default function App() {
 
       return db;
     } catch (err: any) {
-      // console.log('bb', err.stack);
-      toast.show(err?.stack || 'Ocurrió un error.', { type: 'error' });
+      toast.show(err?.message || 'Ocurrió un error.', { type: 'error' });
     } finally {
       setIsLoading(false);
     }
@@ -86,6 +86,34 @@ export default function App() {
     );
   };
 
+  const handleActionDelete = (actionId: string) =>
+    asyncDBTask(async (attrs) => deleteAction({ ...attrs, actionId }), {
+      alertMsg: 'Entrada eliminada',
+    });
+
+  const handleEditActionSubmit = (action: Action) =>
+    asyncDBTask(async (attrs) => editAction({ ...attrs, action }), {
+      alertMsg: 'Entrada editada',
+    });
+
+  const handleCategoryDelete = (categoryId: string) =>
+    asyncDBTask(async (attrs) => deleteCategory({ ...attrs, categoryId }), {
+      alertMsg: 'Categoría eliminada',
+    });
+
+  const handleAddCategorySubmit = (
+    category: ActionCategory,
+    type: ActionType
+  ) =>
+    asyncDBTask(async (attrs) => addCategory({ ...attrs, category, type }), {
+      alertMsg: 'Categoría agregada',
+    });
+
+  const handleEditCategorySubmit = (category: ActionCategory) =>
+    asyncDBTask(async (attrs) => editCategory({ ...attrs, category }), {
+      alertMsg: 'Categoría editada',
+    });
+
   return (
     <View style={{ ...styles.container, height: height }}>
       <Calculator
@@ -109,6 +137,16 @@ export default function App() {
           onSubmit={handleAddActionFormSubmit}
         />
       )}
+
+      <PopupCategories
+        actionType={'expense'}
+        db={db}
+        onClose={() => setPopup(undefined)}
+        onItemDelete={handleCategoryDelete}
+        onEditItemSubmit={handleEditCategorySubmit}
+        onNewItemSubmit={handleAddCategorySubmit}
+      />
+
       <Toast ref={(ref) => (global['toast'] = ref!)} />
     </View>
   );
