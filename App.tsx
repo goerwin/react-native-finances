@@ -21,6 +21,7 @@ import {
   DB,
 } from './src/helpers/dbHelpers';
 import PopupCategories from './src/components/PopupCategories';
+import PopupIncomesExpenses from './src/components/PopupIncomesExpenses';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,7 +30,8 @@ export default function App() {
   const [popup, setPopup] = useState<{
     action: 'add' | 'show' | 'showCategories';
     actionType: ActionType;
-  }>();
+    // }>();
+  } | undefined>({ action: 'show', actionType: 'expense' });
   const [accessToken, setAccessToken] = useState<string>('todo');
   // const [gdFileId, setGDFileId] = useState<Optional<string>>(LSGetGDFileId());
   const [gdFileId, setGDFileId] = useState<Optional<string>>('todo');
@@ -122,11 +124,42 @@ export default function App() {
         onBackspaceLongPress={() => setValue(undefined)}
       />
       <Button
-        title="Gasto"
-        onPress={() => {
-          if (value) setPopup({ action: 'add', actionType: 'expense' });
-        }}
+        title="Ingreso"
+        onPress={() =>
+          value && setPopup({ action: 'add', actionType: 'income' })
+        }
       />
+      <Button
+        title="Gasto"
+        onPress={() =>
+          value && setPopup({ action: 'add', actionType: 'expense' })
+        }
+      />
+
+      <Button
+        title="Ingresos"
+        onPress={() => setPopup({ action: 'show', actionType: 'income' })}
+      />
+
+      <Button
+        title="Gastos"
+        onPress={() => setPopup({ action: 'show', actionType: 'expense' })}
+      />
+
+      <Button
+        title="Categoría Ingresos"
+        onPress={() =>
+          setPopup({ action: 'showCategories', actionType: 'income' })
+        }
+      />
+
+      <Button
+        title="Categoría Gastos"
+        onPress={() =>
+          setPopup({ action: 'showCategories', actionType: 'expense' })
+        }
+      />
+
       {db && popup?.action === 'add' && (
         <AddIncomeExpenseForm
           actionType={popup.actionType}
@@ -138,14 +171,27 @@ export default function App() {
         />
       )}
 
-      <PopupCategories
-        actionType={'expense'}
-        db={db}
-        onClose={() => setPopup(undefined)}
-        onItemDelete={handleCategoryDelete}
-        onEditItemSubmit={handleEditCategorySubmit}
-        onNewItemSubmit={handleAddCategorySubmit}
-      />
+      {popup?.action === 'showCategories' ? (
+        <PopupCategories
+          actionType={popup.actionType}
+          db={db}
+          onClose={() => setPopup(undefined)}
+          onItemDelete={handleCategoryDelete}
+          onEditItemSubmit={handleEditCategorySubmit}
+          onNewItemSubmit={handleAddCategorySubmit}
+        />
+      ) : null}
+
+      {popup?.action === 'show' ? (
+        <PopupIncomesExpenses
+          actionType={popup.actionType}
+          db={db}
+          onClose={() => setPopup(undefined)}
+          onItemDelete={handleCategoryDelete}
+          onEditItemSubmit={handleEditCategorySubmit}
+          onNewItemSubmit={handleAddCategorySubmit}
+        />
+      ) : null}
 
       <Toast ref={(ref) => (global['toast'] = ref!)} />
     </View>

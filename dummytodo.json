@@ -1,9 +1,15 @@
 {
-  "updatedAt": "2022-12-31T21:48:54.782Z",
+  "updatedAt": "2023-02-18T17:01:37.548Z",
   "expenseCategories": [
     {
-      "id": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "id": "180bf572-802d-40d3-a444-ed2dd5946e5e",
       "sortPriority": 0,
+      "name": "Mom",
+      "description": ""
+    },
+    {
+      "id": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "sortPriority": 2.5,
       "name": "PG",
       "description": ""
     },
@@ -41,7 +47,7 @@
       "id": "fb54d1a9-f7cc-4605-8512-b84d987cc372",
       "sortPriority": 9,
       "name": "Luz",
-      "description": ""
+      "description": "recibo de luz"
     },
     {
       "id": "2c2291a6-5618-47b6-a30f-aebd370269c2",
@@ -1352,6 +1358,982 @@
       "type": "expense",
       "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
       "description": ""
+    },
+    {
+      "id": "158f7ee2-142f-4e5f-8b0b-ca9937ac6ff3",
+      "date": "2023-01-02T15:26:27.640Z",
+      "value": 59900,
+      "type": "expense",
+      "expenseCategory": "3731aecb-9aac-49e0-af70-1eda5626e504",
+      "description": ""
+    },
+    {
+      "id": "62fcfe7f-ac15-4e36-b0d3-03b30a3549af",
+      "date": "2023-01-02T23:20:50.761Z",
+      "value": 8500,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "94d70157-1a53-4fca-a1b5-389b78f97e6d",
+      "date": "2023-01-03T00:41:59.432Z",
+      "value": 190301,
+      "type": "expense",
+      "expenseCategory": "b0c2dbc8-b625-416c-a03c-27c9b46015a2",
+      "description": ""
+    },
+    {
+      "id": "c9706ebd-2781-4a7e-b77a-73de01a8a059",
+      "date": "2023-01-03T01:07:01.565Z",
+      "value": 16900,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "5132f71b-7471-4e71-ad13-07811dceffe6",
+      "date": "2023-01-03T19:03:48.253Z",
+      "value": 700000,
+      "type": "expense",
+      "expenseCategory": "b0c2dbc8-b625-416c-a03c-27c9b46015a2",
+      "description": ""
+    },
+    {
+      "id": "1d09b591-498c-46e1-9362-5002de741e82",
+      "date": "2023-01-04T21:11:11.460Z",
+      "value": 7500,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "efc6e13e-75ca-406f-b99b-6b8b1481b8c6",
+      "date": "2023-01-04T21:11:23.013Z",
+      "value": 100000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "59d96f31-7afd-4db9-a782-d713d0c69316",
+      "date": "2023-01-05T00:40:14.477Z",
+      "value": 20000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "26d1f9e3-1640-4e0d-b2f0-219b2da28f7e",
+      "date": "2023-01-06T22:08:42.554Z",
+      "value": 95288,
+      "type": "expense",
+      "expenseCategory": "b0c2dbc8-b625-416c-a03c-27c9b46015a2",
+      "description": ""
+    },
+    {
+      "id": "21473927-476d-4702-a00b-6984e2be62f9",
+      "date": "2023-01-07T01:35:42.666Z",
+      "value": 70200,
+      "type": "expense",
+      "expenseCategory": "a66f79db-f344-4365-ad19-0ef52a4fc841",
+      "description": ""
+    },
+    {
+      "id": "8800d772-4ee4-4a89-bb13-2d9bc94b45fd",
+      "date": "2023-01-07T12:00:20.531Z",
+      "value": 18000,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": ""
+    },
+    {
+      "id": "ec44e860-6485-43d7-bf8b-a35f673d8262",
+      "date": "2023-01-08T01:55:24.071Z",
+      "value": 13200,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": ""
+    },
+    {
+      "id": "d30b08ec-8d21-4d47-b1b6-9413e84daccf",
+      "date": "2023-01-08T21:34:23.713Z",
+      "value": 8100,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": ""
+    },
+    {
+      "id": "eba94ad1-6a20-4737-b195-6e385423c318",
+      "date": "2023-01-08T22:10:49.863Z",
+      "value": 60000,
+      "type": "expense",
+      "expenseCategory": "0f5fd820-7735-4a28-bcb3-096db83d03e8",
+      "description": ""
+    },
+    {
+      "id": "78b1dcac-3924-45b5-874e-a8a36c12cf3f",
+      "date": "2023-01-08T22:11:35.448Z",
+      "value": 288600,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": ""
+    },
+    {
+      "id": "2d817a7d-caf8-4bb9-a174-c3574130fcc8",
+      "date": "2023-01-09T19:15:27.126Z",
+      "value": 50000,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": ""
+    },
+    {
+      "id": "19412753-a800-42db-adf3-477ff3927bb3",
+      "date": "2023-01-09T23:12:16.853Z",
+      "value": 9000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "7c62f91c-1af5-4cbf-8594-3e27587e1dd9",
+      "date": "2023-01-09T23:12:28.806Z",
+      "value": 13700,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "15bab15e-38af-42f5-b40f-b63fc825003d",
+      "date": "2023-01-10T00:40:10.669Z",
+      "value": 7500,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "214c34bf-5d62-40e2-a0ba-14c06dfe0b9a",
+      "date": "2023-01-10T01:25:43.613Z",
+      "value": 50000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "3695dbad-c1e7-40de-b028-f3fa22dc5b29",
+      "date": "2023-01-10T22:39:43.810Z",
+      "value": 50000,
+      "type": "expense",
+      "expenseCategory": "b0c2dbc8-b625-416c-a03c-27c9b46015a2",
+      "description": ""
+    },
+    {
+      "id": "de6ae7a7-96a8-45fb-b539-98b48754c02d",
+      "date": "2023-01-11T03:03:01.281Z",
+      "value": 38550,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "564a9904-3395-4e3e-8147-fa03abd651b4",
+      "date": "2023-01-12T00:31:50.380Z",
+      "value": 27000,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "2bfddb4e-21a5-46f5-9954-599da6d42bd6",
+      "date": "2023-01-13T00:04:19.837Z",
+      "value": 50000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "24f8651c-61ee-49d6-a573-af49b40c398e",
+      "date": "2023-01-13T00:28:04.992Z",
+      "value": 55400,
+      "type": "expense",
+      "expenseCategory": "4b42d234-7ff1-427c-9630-465493b6ebd4",
+      "description": ""
+    },
+    {
+      "id": "b8e2d41e-b0c5-46d2-931b-1cabd8f9d108",
+      "date": "2023-01-13T02:24:10.168Z",
+      "value": 7500,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "719224dc-72f5-4305-8eb7-b311eb1aac05",
+      "date": "2023-01-14T02:42:06.934Z",
+      "value": 11400,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "3ddcc385-3548-4c4a-b096-09b0f1aa9e68",
+      "date": "2023-01-15T03:41:46.716Z",
+      "value": 83200,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "e06d979d-fb84-42bf-ac1d-dccaa03ed44c",
+      "date": "2023-01-15T19:21:21.133Z",
+      "value": 76000,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "11715117-308c-428d-9755-6f63dad2d988",
+      "date": "2023-01-15T19:41:41.712Z",
+      "value": 24000,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "3c3fc933-845c-4285-be79-0f4878c9e3f2",
+      "date": "2023-01-15T21:49:18.264Z",
+      "value": 389796,
+      "type": "expense",
+      "expenseCategory": "b0c2dbc8-b625-416c-a03c-27c9b46015a2",
+      "description": ""
+    },
+    {
+      "id": "a68f5d3f-f471-4e43-9a69-2e94fdd11b09",
+      "date": "2023-01-15T21:51:08.023Z",
+      "value": 50000,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": ""
+    },
+    {
+      "id": "8d16ba9d-f870-4076-99c2-48591981e64e",
+      "date": "2023-01-16T23:38:24.229Z",
+      "value": 20100,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "21a06462-e52b-4307-888e-fe3d9276f117",
+      "date": "2023-01-17T21:38:36.163Z",
+      "value": 40000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "c5f801c9-5249-4265-85b4-5b2648dd6872",
+      "date": "2023-01-18T00:48:55.733Z",
+      "value": 50000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "7600cc0f-3789-49c0-8611-e432abe48a3d",
+      "date": "2023-01-18T01:03:51.321Z",
+      "value": 140367,
+      "type": "expense",
+      "expenseCategory": "2c2291a6-5618-47b6-a30f-aebd370269c2",
+      "description": ""
+    },
+    {
+      "id": "e11eaed9-148a-4092-9776-6c959c7b616f",
+      "date": "2023-01-18T01:05:21.174Z",
+      "value": 14450,
+      "type": "expense",
+      "expenseCategory": "0b135e7a-00ff-411a-b0fd-6b24a85d0d62",
+      "description": ""
+    },
+    {
+      "id": "a10969ff-37fd-437d-bc54-11d853a74476",
+      "date": "2023-01-18T01:08:40.402Z",
+      "value": 82638,
+      "type": "expense",
+      "expenseCategory": "a66f79db-f344-4365-ad19-0ef52a4fc841",
+      "description": ""
+    },
+    {
+      "id": "1fa5284e-5fe4-4b28-9f4a-671defae7e95",
+      "date": "2023-01-20T00:44:33.599Z",
+      "value": 2000000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "73301930-59ff-466d-a672-3b1fed11f3b2",
+      "date": "2023-01-20T20:53:07.612Z",
+      "value": 39900,
+      "type": "expense",
+      "expenseCategory": "3731aecb-9aac-49e0-af70-1eda5626e504",
+      "description": ""
+    },
+    {
+      "id": "3ddea4d5-7055-43b3-a4f5-fe52b3a0d02e",
+      "date": "2023-01-20T21:49:42.490Z",
+      "value": 60000,
+      "type": "expense",
+      "expenseCategory": "0f5fd820-7735-4a28-bcb3-096db83d03e8",
+      "description": ""
+    },
+    {
+      "id": "cf797719-7daf-42da-9d58-978934ddf3e4",
+      "date": "2023-01-21T00:08:02.548Z",
+      "value": 180000,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": ""
+    },
+    {
+      "id": "732a85e3-3ebe-4023-810b-b52232270662",
+      "date": "2023-01-21T00:08:12.779Z",
+      "value": 95820,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "b53c7b28-87e4-404d-867c-07fbcb4e771f",
+      "date": "2023-01-21T01:31:47.819Z",
+      "value": 22500,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "df25f265-3b3c-46b7-a3f9-18b105886241",
+      "date": "2023-01-21T18:04:59.751Z",
+      "value": 40000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "32da10c1-fff5-44d1-9c71-5ea1a6ba53b9",
+      "date": "2023-01-21T18:52:22.555Z",
+      "value": 202830,
+      "type": "expense",
+      "expenseCategory": "fb54d1a9-f7cc-4605-8512-b84d987cc372",
+      "description": ""
+    },
+    {
+      "id": "f34aa228-d9e7-4e78-a52a-858f493813cf",
+      "date": "2023-01-21T23:51:30.423Z",
+      "value": 161820,
+      "type": "expense",
+      "expenseCategory": "b0c2dbc8-b625-416c-a03c-27c9b46015a2",
+      "description": ""
+    },
+    {
+      "id": "bf6e20b5-4573-4a18-af23-1e5a9a6a691a",
+      "date": "2023-01-22T20:07:21.101Z",
+      "value": 36000,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "9e0ec992-8316-4ffb-8d5a-5901ab575bd8",
+      "date": "2023-01-22T21:43:02.535Z",
+      "value": 55600,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "b4994f3b-66fc-47b4-8ca7-a12bc3fb96c1",
+      "date": "2023-01-23T06:13:13.468Z",
+      "value": 36400,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "af9e1888-4f1a-4548-8fcd-1546b54c18c1",
+      "date": "2023-01-23T13:15:42.796Z",
+      "value": 70000,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "8c6caa74-d43b-4bbb-9e94-9adfd94257f0",
+      "date": "2023-01-24T00:47:04.691Z",
+      "value": 109000,
+      "type": "expense",
+      "expenseCategory": "b0c2dbc8-b625-416c-a03c-27c9b46015a2",
+      "description": ""
+    },
+    {
+      "id": "8ff11cc8-20fb-425a-9987-cd3b83907fcb",
+      "date": "2023-01-24T01:03:08.628Z",
+      "value": 50000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "805b5314-f8d3-4c78-831c-5ce8d19d1492",
+      "date": "2023-01-24T21:43:55.068Z",
+      "value": 15000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "0bca8e9e-4903-42aa-a326-3a33e72b2aec",
+      "date": "2023-01-25T00:36:16.169Z",
+      "value": 14500,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "eaa3149b-dd4b-4599-b97f-09a1f3e77a50",
+      "date": "2023-01-25T04:02:54.659Z",
+      "value": 14450,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "75719f00-71b2-4bcc-b85c-8e8bd18fd479",
+      "date": "2023-01-26T19:39:10.835Z",
+      "value": 250000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "8646cf20-4f2f-45be-b9d9-4cfbdb15d835",
+      "date": "2023-01-27T22:22:35.428Z",
+      "value": 50000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "e075ca38-1e2b-4207-85a0-2fe5bdbd6e24",
+      "date": "2023-01-28T00:38:47.198Z",
+      "value": 7500,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "17047430-9517-46e4-a6d8-dfee4053040d",
+      "date": "2023-01-28T01:48:21.066Z",
+      "value": 60250,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "4a90ccec-9f63-424e-a84f-d1539680b33c",
+      "date": "2023-01-28T20:42:52.463Z",
+      "value": 92000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "9e2fc8ff-2f5a-45c1-860e-dd50d835af3c",
+      "date": "2023-01-28T21:04:21.268Z",
+      "value": 120000,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "06069708-72b3-4950-bc87-9609fd1d4d5b",
+      "date": "2023-01-28T21:21:51.116Z",
+      "value": 57000,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": ""
+    },
+    {
+      "id": "6a79ef8f-4a97-46e9-a256-15185fa48d56",
+      "date": "2023-01-28T21:22:06.006Z",
+      "value": 12000,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": ""
+    },
+    {
+      "id": "b63a1a9d-0fed-4a6a-922b-20daa93067e6",
+      "date": "2023-01-28T21:27:28.783Z",
+      "value": 50000,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": ""
+    },
+    {
+      "id": "27fef401-e605-4f18-9979-b2312fde37d5",
+      "date": "2023-01-29T01:00:35.070Z",
+      "value": 100000,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "f37c6d24-31bc-4371-9b7c-2b027e080b77",
+      "date": "2023-01-29T23:08:58.540Z",
+      "value": 58000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "34f4384d-fcde-470e-a31c-093c97f39668",
+      "date": "2023-01-30T13:19:29.311Z",
+      "value": 64000,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "496e6496-c806-4d86-a906-44b5a62365f0",
+      "date": "2023-01-30T13:19:45.790Z",
+      "value": 36000,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "41d71b5c-1a65-44d4-bd47-da32691f87c6",
+      "date": "2023-01-31T00:35:35.526Z",
+      "value": 97609,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": ""
+    },
+    {
+      "id": "e06ebfd7-98ed-499d-95d3-6865cd48eb78",
+      "date": "2023-01-31T00:57:28.740Z",
+      "value": 26000,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": ""
+    },
+    {
+      "id": "0680f1b9-acfc-45c4-aebe-97fb39b703dd",
+      "date": "2023-01-31T15:40:01.904Z",
+      "value": 3219766,
+      "type": "expense",
+      "expenseCategory": "1e35bcba-1e6b-4467-b164-1cecbc380247",
+      "description": ""
+    },
+    {
+      "id": "334b55ae-b0ca-41ef-a6cd-46359993c1eb",
+      "date": "2023-01-31T15:41:59.725Z",
+      "value": 29350,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": ""
+    },
+    {
+      "id": "0fafcbad-452a-430b-9f1e-8b50bf5572d3",
+      "date": "2023-01-31T15:44:36.567Z",
+      "value": 1914151,
+      "type": "expense",
+      "expenseCategory": "0df5a64a-0d25-40d9-a184-2615f247be2a",
+      "description": ""
+    },
+    {
+      "id": "9108a809-83b4-424c-bfd1-ff73c83a4c2d",
+      "date": "2023-01-31T17:08:08.665Z",
+      "value": 10879004,
+      "type": "income",
+      "incomeCategory": "aabff692-d707-474d-8558-82b1793db187",
+      "description": ""
+    },
+    {
+      "id": "c29f8b12-e40c-4ee3-9f6e-911995c64537",
+      "date": "2023-01-31T17:08:24.030Z",
+      "value": 1914151,
+      "type": "income",
+      "incomeCategory": "aabff692-d707-474d-8558-82b1793db187",
+      "description": ""
+    },
+    {
+      "id": "fbd8e9a3-e430-49bf-9c21-26cfaf7cfc9a",
+      "date": "2023-01-31T23:13:42.459Z",
+      "value": 30000,
+      "type": "expense",
+      "expenseCategory": "9ef81cf5-f8e7-4c0f-8758-81ccacc934cc",
+      "description": ""
+    },
+    {
+      "id": "2aaf8ea5-aed2-4e46-beff-da0acf05af3e",
+      "date": "2023-02-01T14:43:03.060Z",
+      "value": 59900,
+      "type": "expense",
+      "expenseCategory": "3731aecb-9aac-49e0-af70-1eda5626e504",
+      "description": ""
+    },
+    {
+      "id": "7a7954e3-e2c0-449e-beeb-41e0938dbfbd",
+      "date": "2023-02-01T21:55:17.154Z",
+      "value": 68000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "0efffec7-282d-4c14-979f-0eed5122268f",
+      "date": "2023-02-02T00:54:00.000Z",
+      "value": 30000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "bfb9c858-5531-4168-b87d-4f52c9394926",
+      "date": "2023-02-02T01:10:06.869Z",
+      "value": 180000,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": "Zapatos Nathy"
+    },
+    {
+      "id": "7466fa66-2d4b-4dc1-aaae-d1a95400e17d",
+      "date": "2023-02-02T02:59:57.380Z",
+      "value": 24520,
+      "type": "expense",
+      "expenseCategory": "b0c2dbc8-b625-416c-a03c-27c9b46015a2",
+      "description": ""
+    },
+    {
+      "id": "f6ea5477-1198-463e-a233-df8a44cc015e",
+      "date": "2023-02-02T03:15:00.298Z",
+      "value": 26900,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "9993fa44-4eb5-45a6-b6a6-d44c370bc920",
+      "date": "2023-02-02T23:20:33.296Z",
+      "value": 40000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "09d55cf1-6743-4149-8b88-af0c53adfcd7",
+      "date": "2023-02-03T06:13:34.608Z",
+      "value": 141000,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "4ee1ef75-e34b-414d-bd93-aeb82e1933e7",
+      "date": "2023-02-03T06:37:30.273Z",
+      "value": 33300,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "1b12e774-984b-411d-ae40-7bacd5f71c04",
+      "date": "2023-02-03T22:09:00.000Z",
+      "value": 700000,
+      "type": "expense",
+      "expenseCategory": "180bf572-802d-40d3-a444-ed2dd5946e5e",
+      "description": ""
+    },
+    {
+      "id": "b8af20c4-e222-4867-8566-9465d1ab968f",
+      "date": "2023-02-04T01:32:59.867Z",
+      "value": 30000,
+      "type": "expense",
+      "expenseCategory": "b0c2dbc8-b625-416c-a03c-27c9b46015a2",
+      "description": ""
+    },
+    {
+      "id": "7cda8212-62e7-476c-8c83-d7d832187035",
+      "date": "2023-02-04T05:38:52.934Z",
+      "value": 15450,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "d58a2bdd-9345-40f7-afc3-7ab5bf3e1682",
+      "date": "2023-02-04T21:08:07.296Z",
+      "value": 78500,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "c44ffa3b-3152-408a-80b0-2c10c813bdc9",
+      "date": "2023-02-04T22:55:52.034Z",
+      "value": 6500,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "de956c95-5f8c-4514-b9a1-52cc3ca2ded5",
+      "date": "2023-02-05T02:21:01.845Z",
+      "value": 88172,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "1d5bc55a-387c-4d74-96ed-a99eb30fbd8d",
+      "date": "2023-02-05T18:48:09.355Z",
+      "value": 307200,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": "Base giratoria tv"
+    },
+    {
+      "id": "66ca9347-53f2-4c9b-aa05-43a96fdaab2c",
+      "date": "2023-02-05T23:25:00.000Z",
+      "value": 200000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "9537c2d8-c846-4753-9978-3b1867a6a989",
+      "date": "2023-02-06T01:47:57.175Z",
+      "value": 22860,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": ""
+    },
+    {
+      "id": "b0251310-0cab-486a-90f6-6e635edcff46",
+      "date": "2023-02-06T22:13:00.000Z",
+      "value": 80000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "35c3b899-c904-4292-b516-e016cefb8dbb",
+      "date": "2023-02-07T01:30:47.239Z",
+      "value": 65000,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "66178699-a755-4cae-b8c9-186bcc2c6102",
+      "date": "2023-02-07T03:01:45.615Z",
+      "value": 22500,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "1848f319-74f1-4f52-9102-b5027e0b4111",
+      "date": "2023-02-08T00:13:40.530Z",
+      "value": 16000,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "f5ebacd8-1222-4100-a383-6e055ffaae04",
+      "date": "2023-02-08T01:56:51.964Z",
+      "value": 207234,
+      "type": "expense",
+      "expenseCategory": "b0c2dbc8-b625-416c-a03c-27c9b46015a2",
+      "description": ""
+    },
+    {
+      "id": "48950d3c-b226-48c6-a490-12446ad5f0b4",
+      "date": "2023-02-08T01:57:12.431Z",
+      "value": 25000,
+      "type": "expense",
+      "expenseCategory": "b0c2dbc8-b625-416c-a03c-27c9b46015a2",
+      "description": ""
+    },
+    {
+      "id": "71144163-f5dc-4731-8281-95e37d93e494",
+      "date": "2023-02-08T17:14:13.748Z",
+      "value": 28798,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": ""
+    },
+    {
+      "id": "01faaec7-6b00-4e3a-8db0-caebf6da6304",
+      "date": "2023-02-09T02:27:17.028Z",
+      "value": 10500,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "eaebfdcc-f7be-4061-8ea6-938ff70be168",
+      "date": "2023-02-09T11:45:50.196Z",
+      "value": 500000,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": "Retiro"
+    },
+    {
+      "id": "e3196e62-8306-4613-acca-4224157847fb",
+      "date": "2023-02-09T23:16:40.313Z",
+      "value": 34100,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "ae407a76-3fb4-4673-b628-d66e512518f7",
+      "date": "2023-02-11T20:01:25.524Z",
+      "value": 60000,
+      "type": "expense",
+      "expenseCategory": "0f5fd820-7735-4a28-bcb3-096db83d03e8",
+      "description": ""
+    },
+    {
+      "id": "ce80299a-2095-4e65-8396-b73da9bc3cdc",
+      "date": "2023-02-12T01:15:49.250Z",
+      "value": 67000,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "13d39c15-aee2-40d9-ac96-03f54ef318fe",
+      "date": "2023-02-13T02:35:17.801Z",
+      "value": 17900,
+      "type": "expense",
+      "expenseCategory": "fe18f6f7-b589-4692-8deb-48d603748be7",
+      "description": ""
+    },
+    {
+      "id": "93e45bed-9b29-4976-b086-c329f008d043",
+      "date": "2023-02-13T02:40:44.578Z",
+      "value": 70200,
+      "type": "expense",
+      "expenseCategory": "a66f79db-f344-4365-ad19-0ef52a4fc841",
+      "description": ""
+    },
+    {
+      "id": "d4c38f19-744a-44eb-9c13-1c60cc44a7c1",
+      "date": "2023-02-13T02:56:45.377Z",
+      "value": 56400,
+      "type": "expense",
+      "expenseCategory": "4b42d234-7ff1-427c-9630-465493b6ebd4",
+      "description": ""
+    },
+    {
+      "id": "98607d4b-c386-4b1a-a882-3563bd85a574",
+      "date": "2023-02-13T05:22:50.398Z",
+      "value": 21000,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "252d0932-754c-4a5b-b26a-c295ace0b605",
+      "date": "2023-02-13T18:05:20.171Z",
+      "value": 205845,
+      "type": "expense",
+      "expenseCategory": "b0c2dbc8-b625-416c-a03c-27c9b46015a2",
+      "description": ""
+    },
+    {
+      "id": "479c0e71-a2d6-4ff6-8c3b-fa88d1d3cff4",
+      "date": "2023-02-13T22:23:41.866Z",
+      "value": 30000,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "a89d249e-0c50-4ab6-b271-617fe7dbd859",
+      "date": "2023-02-13T23:54:46.125Z",
+      "value": 27500,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "9729c344-57e1-4619-8439-4aec1b2c6bff",
+      "date": "2023-02-14T02:19:04.561Z",
+      "value": 48500,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "d25df06b-cd86-447f-be90-ddc63ce27014",
+      "date": "2023-02-15T06:28:15.846Z",
+      "value": 82638,
+      "type": "expense",
+      "expenseCategory": "a66f79db-f344-4365-ad19-0ef52a4fc841",
+      "description": ""
+    },
+    {
+      "id": "daa2b3b0-cc6a-488f-97e4-694df3ca78df",
+      "date": "2023-02-16T01:08:19.545Z",
+      "value": 10500,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "5ee44b74-386f-45be-92a7-c5b7b7d4e20f",
+      "date": "2023-02-16T23:31:57.236Z",
+      "value": 2500000,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "f08bf241-1d25-405d-aaba-fd18a0d86bc6",
+      "date": "2023-02-17T00:21:48.486Z",
+      "value": 6500,
+      "type": "expense",
+      "expenseCategory": "1402b8fd-d7f9-4668-8571-9319cda86422",
+      "description": ""
+    },
+    {
+      "id": "8fa09404-c171-4bbd-809a-1c04bb2f35f7",
+      "date": "2023-02-18T05:42:52.026Z",
+      "value": 94000,
+      "type": "expense",
+      "expenseCategory": "42904060-7aac-4aee-9089-e33af992a658",
+      "description": ""
+    },
+    {
+      "id": "6be93d91-1642-4458-a99b-d71987ea5585",
+      "date": "2023-02-18T16:25:57.492Z",
+      "value": 18480,
+      "type": "expense",
+      "expenseCategory": "0b135e7a-00ff-411a-b0fd-6b24a85d0d62",
+      "description": ""
+    },
+    {
+      "id": "8cd13395-d8d1-4611-82df-4fa812cc79b8",
+      "date": "2023-02-18T17:01:37.548Z",
+      "value": 157839,
+      "type": "expense",
+      "expenseCategory": "2c2291a6-5618-47b6-a30f-aebd370269c2",
+      "description": "beautiful description bro, this is somethign i would like to do"
     }
   ]
 }

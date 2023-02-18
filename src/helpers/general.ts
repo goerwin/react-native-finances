@@ -1,3 +1,6 @@
+import { Alert, Platform } from 'react-native';
+import { Action, ActionType } from './dbHelpers';
+
 type SortablePropertyType = string | number;
 
 type KeysWithValsOfType<T, V> = keyof {
@@ -35,4 +38,34 @@ export function arrayIncludes<T extends U, U>(
   el: U
 ): el is T {
   return arr.includes(el as T);
+}
+
+// type args = Function typeof Alert.alert
+type AlertParameters = Parameters<typeof Alert.alert>;
+
+function alertPolyfill(...[title, msg, buttons, ..._]: AlertParameters) {
+  const result = window.confirm([title, msg].filter(Boolean).join('\n'));
+
+  if (result) {
+    const confirmOption = buttons?.find(({ style }) => style !== 'cancel');
+    confirmOption?.onPress?.();
+  } else {
+    const cancelOption = buttons?.find(({ style }) => style === 'cancel');
+    cancelOption?.onPress?.();
+  }
+}
+
+export const alert = Platform.OS === 'web' ? alertPolyfill : Alert.alert;
+
+export function filterActionsByTypeAndStartEndDates(
+  attrs: { actionType: ActionType; startDate: Date; endDate: Date },
+  action: Action
+) {
+  const actionDate = new Date(action.date);
+
+  return (
+    action.type === attrs.actionType &&
+    actionDate >= attrs.startDate &&
+    actionDate <= attrs.endDate
+  );
 }

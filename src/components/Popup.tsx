@@ -1,10 +1,11 @@
 import { ReactNode } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export type Props = {
   title: string;
   children: ReactNode;
   aboveHeadingTitle?: string;
+  bottomArea?: ReactNode;
 };
 
 export default function Popup(props: Props) {
@@ -20,7 +21,10 @@ export default function Popup(props: Props) {
 
           <Text style={styles.h2}>{props.title}</Text>
         </View>
-        <View style={styles.scrollableContent}>{props.children}</View>
+        <ScrollView style={styles.scrollableContent}>
+          {props.children}
+        </ScrollView>
+        {props.bottomArea ? <View>{props.bottomArea}</View> : null}
       </View>
     </View>
   );
@@ -36,6 +40,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10,
+  },
+
+  scrollableContent: {
+    maxHeight: 300,
+    marginBottom: 20,
   },
 
   content: {
@@ -57,6 +66,4 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'normal',
   },
-
-  scrollableContent: {},
 });

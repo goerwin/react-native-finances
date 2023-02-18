@@ -52,7 +52,7 @@ export default function Input({
 }: Props) {
   return (
     <Controller
-      defaultValue={defaultValue ?? props.value}
+      defaultValue={String(defaultValue ?? props.value)}
       control={control}
       rules={props.rules}
       name={name}
@@ -62,10 +62,8 @@ export default function Input({
           {...props}
           style={{ ...styles.input, ...props.style }}
           onBlur={field.onBlur}
-          value={field.value}
-          onChangeText={(val) =>
-            field.onChange(parseValue(val, props.valueType))
-          }
+          value={String(field.value)}
+          onChangeText={field.onChange}
         />
       )}
     />
