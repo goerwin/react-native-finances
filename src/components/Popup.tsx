@@ -1,15 +1,19 @@
 import { ReactNode } from 'react';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Modal, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export type Props = {
   title: string;
   children: ReactNode;
   aboveHeadingTitle?: string;
   bottomArea?: ReactNode;
+  onRequestClose: () => void;
 };
 
 export default function Popup(props: Props) {
   return (
+    // <Modal onRequestClose={props.onRequestClose}>
+    // </Modal>
+    // NOTE: Not using modal because it hides the Toast notifications!
     <View style={styles.container}>
       <View style={styles.content}>
         <View style={{ alignItems: 'center' }}>

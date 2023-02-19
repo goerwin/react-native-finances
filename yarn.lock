@@ -1795,6 +1795,13 @@
     "prompts" "^2.4.0"
     "semver" "^6.3.0"
 
+"@react-native-community/datetimepicker@6.5.2":
+  "integrity" "sha512-9K3zhIH1zmpIGSG3GJTWLIoAx+sR4kJ1wqpGKMwWJ5IYXBsFxMdvGw023t0pz2CQStlnNbbNhnZY/HMYFBCsCg=="
+  "resolved" "https://registry.npmjs.org/@react-native-community/datetimepicker/-/datetimepicker-6.5.2.tgz"
+  "version" "6.5.2"
+  dependencies:
+    "invariant" "^2.2.4"
+
 "@react-native-picker/picker@2.4.8":
   "integrity" "sha512-5NQ5XPo1B03YNqKFrV6h9L3CQaHlB80wd4ETHUEABRP2iLh7FHLVObX2GfziD+K/VJb8G4KZcZ23NFBFP1f7bg=="
   "resolved" "https://registry.npmjs.org/@react-native-picker/picker/-/picker-2.4.8.tgz"
@@ -4615,7 +4622,7 @@
     "commander" "2.20.0"
     "update-check" "1.5.3"
 
-"expo@*", "expo@^47.0.0":
+"expo@*", "expo@^47.0.13":
   "integrity" "sha512-9VjjGdViCJ9NfWbUE7brkwFBDvKuA35V345vMtHFYNKoGJjXib36yitmawreMDQFv0kMTqTnzc7T2191Pod7Ng=="
   "resolved" "https://registry.npmjs.org/expo/-/expo-47.0.13.tgz"
   "version" "47.0.13"

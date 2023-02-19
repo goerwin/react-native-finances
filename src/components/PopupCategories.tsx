@@ -83,6 +83,7 @@ export default function PopupCategories({ actionType, ...props }: Props) {
 
   return (
     <Popup
+      onRequestClose={props.onClose}
       title={
         actionType === 'expense' ? 'Categoría Gastos' : 'Categoría Ingresos'
       }

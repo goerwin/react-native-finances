@@ -50,18 +50,25 @@ export default function App() {
     attrs?: { alertMsg?: string }
   ) {
     try {
+      console.log('bb', 1);
+
       if (!accessToken) throw new Error('Missing accessToken');
       if (!gdFileId) throw new Error('Missing Google Drive FileId');
 
+      console.log('bb', 2);
       setIsLoading(true);
       const db = await fn({ accessToken, gdFileId });
       setDB(db);
 
+      console.log('bb', 3);
+
       attrs?.alertMsg &&
         toast.show(attrs.alertMsg, { type: 'success', duration: 1000 });
 
+      console.log('bb', 4);
       return db;
     } catch (err: any) {
+      console.log('bb', err?.message);
       toast.show(err?.message || 'Ocurrió un error.', { type: 'error' });
     } finally {
       setIsLoading(false);

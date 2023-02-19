@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useForm, UseFormStateProps } from 'react-hook-form';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, Pressable, StyleSheet, Text, View } from 'react-native';
 import { Action, ActionCategory, ActionType, DB } from '../helpers/DBHelpers';
 import {
   alert,
@@ -9,14 +9,18 @@ import {
 } from '../helpers/general';
 import {
   getFirstDayOfMonthDate,
+  getFormattedLocalDate,
   getFormattedLocalDatetime,
   getLastDayOfMonthDate,
+  getNextMonthFirstDayDate,
+  getPreviousMonthFirstDayDate,
 } from '../helpers/time';
 import { formatNumberValueToCurrency } from './Calculator';
 import { Picker } from '@react-native-picker/picker';
 import Input from './Input';
 import Popup from './Popup';
 import Select from './Select';
+import PopupFilterByDates from './PopupFilterByDates';
 
 export interface Props {
   db: DB;
@@ -55,7 +59,10 @@ function getActionView(
           </Text>
         </Text>
 
-        <Text style={actionViewStyles.desc}>{action.description}</Text>
+        {action.description ? (
+          <Text style={actionViewStyles.desc}>{action.description}</Text>
+        ) : null}
+
         <Text style={actionViewStyles.date}>
           {getFormattedLocalDatetime(action.date)}
         </Text>
@@ -172,6 +179,7 @@ export default function PopupIncomesExpenses({ actionType, ...props }: Props) {
     filterEndDate: getLastDayOfMonthDate(today),
   });
   const [editingActionId, setEditingActionId] = useState<string>();
+  const [showFilterByDatesPopup, setShowFilterByDatesPopup] = useState(false);
 
   const categories =
     actionType === 'expense'
@@ -215,11 +223,52 @@ export default function PopupIncomesExpenses({ actionType, ...props }: Props) {
 
   return (
     <Popup
+      onRequestClose={props.onClose}
       title={actionType === 'expense' ? 'Gastos' : 'Ingresos'}
       bottomArea={
         <View>
-          <Button title="Cancelar" onPress={props.onClose} />
-          <Button title="Agregar" onPress={() => {}} />
+          <Text style={styles.value}>
+            Total: {formatNumberValueToCurrency(filteredTotal)}
+          </Text>
+
+          <View style={styles.filterContainer}>
+            <Button
+              title="←"
+              onPress={() =>
+                setFilterDates({
+                  filterStartDate:
+                    getPreviousMonthFirstDayDate(filterStartDate),
+                  filterEndDate: getLastDayOfMonthDate(
+                    getPreviousMonthFirstDayDate(filterStartDate)
+                  ),
+                })
+              }
+            />
+            <Pressable onPress={() => setShowFilterByDatesPopup(true)}>
+              <Text style={styles.value}>
+                {getFormattedLocalDate(filterStartDate)}
+              </Text>
+              <Text style={styles.value}>
+                {getFormattedLocalDate(filterEndDate)}
+              </Text>
+            </Pressable>
+
+            <Button
+              title="→"
+              onPress={() =>
+                setFilterDates({
+                  filterStartDate: getNextMonthFirstDayDate(filterStartDate),
+                  filterEndDate: getLastDayOfMonthDate(
+                    getNextMonthFirstDayDate(filterStartDate)
+                  ),
+                })
+              }
+            />
+          </View>
+          <View>
+            <Button title="Cancelar" onPress={props.onClose} />
+            <Button title="Agregar" onPress={() => {}} />
+          </View>
         </View>
       }
     >
@@ -236,6 +285,26 @@ export default function PopupIncomesExpenses({ actionType, ...props }: Props) {
               onEditClick: handleEditActionClick,
               onRemoveClick: handleRemoveActionClick,
             })
+      )}
+
+      {showFilterByDatesPopup && (
+        <PopupFilterByDates
+          onClose={() => setShowFilterByDatesPopup(false)}
+          startDate={filterStartDate}
+          endDate={filterEndDate}
+          // onCancelClick={() => setShowFilterByDatesPopup(false)}
+          // onCurrentMonthClick={() => {
+          //   setShowFilterByDatesPopup(false);
+          //   setFilterDates({
+          //     filterStartDate: getFirstDayOfMonthDate(today),
+          //     filterEndDate: getLastDayOfMonthDate(today),
+          //   });
+          // }}
+          // onSubmit={(filterStartDate, filterEndDate) => {
+          //   setFilterDates({ filterStartDate, filterEndDate });
+          //   setShowFilterByDatesPopup(false);
+          // }}
+        />
       )}
     </Popup>
   );
@@ -256,7 +325,7 @@ const actionViewStyles = StyleSheet.create({
   },
 
   value: {
-    color: '#fff',
+    color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 2,
@@ -296,5 +365,15 @@ const styles = StyleSheet.create({
     gap: 5,
     alignItems: 'center',
     marginLeft: 5,
+  },
+
+  value: {
+    color: 'white',
+  },
+
+  filterContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 10,
   },
 });
