@@ -48,6 +48,7 @@ export default function Input({
   control,
   defaultValue,
   name,
+  valueType,
   ...props
 }: Props) {
   return (
@@ -58,6 +59,7 @@ export default function Input({
       name={name}
       render={({ field }) => (
         <TextInput
+          keyboardType={valueType === 'number' ? 'numeric' : undefined}
           placeholderTextColor="#aaa"
           {...props}
           style={{ ...styles.input, ...props.style }}

@@ -22,8 +22,7 @@ export interface Props {
   db: DB;
   actionType: ActionType;
   onItemDelete: (itemId: string) => void;
-  onEditItemSubmit: (item: ActionCategory) => void;
-  onNewItemSubmit: (item: ActionCategory, type: ActionType) => void;
+  onEditItemSubmit: (item: Action) => void;
   onClose: () => void;
 }
 
@@ -47,21 +46,47 @@ function getActionView(
   }
 ) {
   return (
-    <View key={action.id} style={{ marginBottom: 20 }}>
-      <View>
-        <Text style={{ color: 'white' }}>
+    <View key={action.id} style={actionViewStyles.container}>
+      <View style={actionViewStyles.content}>
+        <Text style={actionViewStyles.value}>
           {formatNumberValueToCurrency(action.value)}
+          <Text style={actionViewStyles.category}>
+            {getCategoryName(db, action)}
+          </Text>
         </Text>
-        <Text style={{ color: 'white' }}>{getCategoryName(db, action)}</Text>
-        <Text style={{ color: 'white' }}>{action.description}</Text>
-        <Text style={{ color: 'white' }}>
+
+        <Text style={actionViewStyles.desc}>{action.description}</Text>
+        <Text style={actionViewStyles.date}>
           {getFormattedLocalDatetime(action.date)}
         </Text>
       </View>
 
-      <View>
+      <View style={styles.actionBtns}>
         <Button title="✏️" onPress={() => attrs?.onEditClick(action.id)} />
-        <Button title="🗑️" onPress={() => attrs?.onRemoveClick(action.id)} />
+        <Button
+          title="🗑️"
+          onPress={() => {
+            alert(
+              'Eliminar Categoría',
+              `Seguro que quieres eliminar este ${
+                action.type === 'expense' ? 'gasto' : 'ingreso'
+              } (${getCategoryName(db, action)} - ${formatNumberValueToCurrency(
+                action.value
+              )} - ${getFormattedLocalDatetime(action.date)})?`,
+              [
+                {
+                  text: 'Cancel',
+                  style: 'cancel',
+                },
+                {
+                  text: 'OK',
+                  style: 'destructive',
+                  onPress: () => attrs?.onRemoveClick(action.id),
+                },
+              ]
+            );
+          }}
+        />
       </View>
     </View>
   );
@@ -80,10 +105,11 @@ function getActionFormView(
   }
 ) {
   return (
-    <View key={action.id}>
-      <View>
+    <View key={action.id} style={ActionFormViewStyles.container}>
+      <View style={ActionFormViewStyles.content}>
         <Input
           control={attrs.control}
+          style={{ display: 'none' }}
           name="id"
           rules={{ required: true }}
           value={action.id}
@@ -129,7 +155,8 @@ function getActionFormView(
           placeholder="Fecha"
         />
       </View>
-      <View>
+
+      <View style={styles.actionBtns}>
         <Button title="X" onPress={attrs.onCancel} />
         <Button title="Done" onPress={attrs.onSubmit} />
       </View>
@@ -173,8 +200,17 @@ export default function PopupIncomesExpenses({ actionType, ...props }: Props) {
     setEditingActionId(id);
   };
 
-  const submitEditingForm = handleSubmit((data: any) => {
-    console.log(data);
+  const handleRemoveActionClick = (id: string) => {
+    resetEditingForm();
+    props.onItemDelete(id);
+  };
+
+  const submitEditingForm = handleSubmit((editedAction: any) => {
+    resetEditingForm();
+    props.onEditItemSubmit({
+      ...editedAction,
+      value: Number(editedAction.value),
+    });
   });
 
   return (
@@ -198,11 +234,67 @@ export default function PopupIncomesExpenses({ actionType, ...props }: Props) {
             })
           : getActionView(action, props.db, {
               onEditClick: handleEditActionClick,
-              onRemoveClick: resetEditingForm,
+              onRemoveClick: handleRemoveActionClick,
             })
       )}
     </Popup>
   );
 }
 
-const styles = StyleSheet.create({});
+const actionViewStyles = StyleSheet.create({
+  container: {
+    marginBottom: 10,
+    flexDirection: 'row',
+    borderBottomWidth: 1,
+    borderBottomColor: '#fff3',
+    paddingBottom: 10,
+  },
+
+  content: {
+    flexGrow: 1,
+    flexBasis: 1,
+  },
+
+  value: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 2,
+  },
+
+  category: {
+    fontSize: 14,
+    color: '#ffffff80',
+    fontWeight: 'normal',
+    marginLeft: 5,
+  },
+
+  desc: {
+    color: 'white',
+  },
+
+  date: {
+    marginTop: 3,
+    color: '#ffffff80',
+  },
+});
+
+const ActionFormViewStyles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+  },
+
+  content: {
+    flexGrow: 1,
+    flexBasis: 1,
+  },
+});
+
+const styles = StyleSheet.create({
+  actionBtns: {
+    flexDirection: 'row',
+    gap: 5,
+    alignItems: 'center',
+    marginLeft: 5,
+  },
+});

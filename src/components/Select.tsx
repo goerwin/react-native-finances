@@ -25,6 +25,7 @@ export default function Select({
       name={name}
       render={({ field }) => (
         <Picker
+          style={{ padding: 10 }}
           selectedValue={field.value}
           onValueChange={(itemValue, _itemIndex) => field.onChange(itemValue)}
         >

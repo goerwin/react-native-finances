@@ -27,11 +27,14 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [value, setValue] = useState<{ strValue: string; value: number }>();
   const { height } = useWindowDimensions();
-  const [popup, setPopup] = useState<{
-    action: 'add' | 'show' | 'showCategories';
-    actionType: ActionType;
-    // }>();
-  } | undefined>({ action: 'show', actionType: 'expense' });
+  const [popup, setPopup] = useState<
+    | {
+        action: 'add' | 'show' | 'showCategories';
+        actionType: ActionType;
+        // }>();
+      }
+    | undefined
+  >({ action: 'show', actionType: 'expense' });
   const [accessToken, setAccessToken] = useState<string>('todo');
   // const [gdFileId, setGDFileId] = useState<Optional<string>>(LSGetGDFileId());
   const [gdFileId, setGDFileId] = useState<Optional<string>>('todo');
@@ -187,9 +190,8 @@ export default function App() {
           actionType={popup.actionType}
           db={db}
           onClose={() => setPopup(undefined)}
-          onItemDelete={handleCategoryDelete}
-          onEditItemSubmit={handleEditCategorySubmit}
-          onNewItemSubmit={handleAddCategorySubmit}
+          onItemDelete={handleActionDelete}
+          onEditItemSubmit={handleEditActionSubmit}
         />
       ) : null}
 

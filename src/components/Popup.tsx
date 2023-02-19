@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   },
 
   scrollableContent: {
-    maxHeight: 300,
+    maxHeight: 600,
     marginBottom: 20,
   },
 
